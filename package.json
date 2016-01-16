@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/larrybuch/banana-monkey#readme",
   "dependencies": {
-    "hapi": "^12.1.0"
+    "hapi": "^12.1.0",
+    "twilio": "^2.8.0"
   }
 }
