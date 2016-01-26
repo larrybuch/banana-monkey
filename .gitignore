@@ -1,0 +1,12 @@
+# Ignore bundler config and gems
+/.bundle
+vendor/ruby
+
+# Ignore all logfiles and tempfiles.
+/log/*
+!/log/.keep
+/tmp
+
+# Ignore local .env files
+.env
+.env.*
