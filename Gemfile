@@ -13,6 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'haml-rails'
 gem 'puma'
+gem 'sidekiq'
 gem 'twilio-ruby'
 
 # Use ActiveModel has_secure_password
