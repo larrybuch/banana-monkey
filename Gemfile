@@ -29,6 +29,7 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'pry-rails'
   gem 'pry-remote'
+  gem 'rspec-rails', '~> 3.0'
 end
 
 group :production do

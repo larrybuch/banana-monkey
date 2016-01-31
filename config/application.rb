@@ -36,6 +36,7 @@ module BananaMonkey
       g.assets false
       g.helper false
       g.template_engine :haml
+      g.test_framework :rspec
     end
   end
 end
