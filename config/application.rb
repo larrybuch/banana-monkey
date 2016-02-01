@@ -38,5 +38,7 @@ module BananaMonkey
       g.template_engine :haml
       g.test_framework :rspec
     end
+
+    config.active_job.queue_adapter = :sidekiq
   end
 end

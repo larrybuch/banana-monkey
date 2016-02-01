@@ -1,7 +1,7 @@
 class TextMessage < ActiveRecord::Base
   validates :body, :phone_number, presence: true
 
-  def create_content
+  def parse_and_create_content
     parser = TextMessageParser.new(self)
     parser.parse!
 
