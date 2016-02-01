@@ -16,16 +16,6 @@ ActiveRecord::Schema.define(version: 20160131143956) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "lists", force: :cascade do |t|
-    t.integer  "nugget_id"
-    t.integer  "topic_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "lists", ["nugget_id"], name: "index_lists_on_nugget_id", using: :btree
-  add_index "lists", ["topic_id"], name: "index_lists_on_topic_id", using: :btree
-
   create_table "nuggets", force: :cascade do |t|
     t.integer  "user_id",    null: false
     t.text     "body",       null: false
@@ -43,8 +33,18 @@ ActiveRecord::Schema.define(version: 20160131143956) do
     t.datetime "updated_at",   null: false
   end
 
+  create_table "topic_items", force: :cascade do |t|
+    t.integer  "nugget_id"
+    t.integer  "topic_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "topic_items", ["nugget_id"], name: "index_topic_items_on_nugget_id", using: :btree
+  add_index "topic_items", ["topic_id"], name: "index_topic_items_on_topic_id", using: :btree
+
   create_table "topics", force: :cascade do |t|
-    t.string   "string",     null: false
+    t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
